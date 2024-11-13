@@ -1,11 +1,12 @@
-import { useRef, useState } from "react";
-import Globe, { GlobeMethods } from 'react-globe.gl';
+import { Suspense, useRef, useState } from "react";
 import CustomButton from "../CustomButton/CustomButton";
+import { Globe } from "../3Dmodels/Globe";
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls } from "@react-three/drei";
+import CanvasLoader from "../Loading/CanvaLoader";
 export default function About() {
 
     const [hasCopied, setHasCopied] = useState(false);
-    const globeEl = useRef<GlobeMethods | undefined>(undefined);
-
     const handleCopy = () => {
         navigator.clipboard.writeText(' adrian@jsmastery.pro');
         setHasCopied(true);
@@ -65,19 +66,18 @@ export default function About() {
                             className="w-full flex justify-center"
                         >
 
-                            <Globe
-                                ref={globeEl}
-                                height={326}
-                                width={326}
-                                backgroundColor="rgba(0, 0, 0, 0)"
-                                showAtmosphere
-                                showGraticules
-                                globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
-                                bumpImageUrl="//unpkg.com/three-globe/example/img/earth-topology.png"
-                                labelsData={[
-                                    { lat: 29.7996588, lng: 76.3989903, text: 'Anmol Home Town', color: 'white', size: 1000 }
-                                ]}
-                            />
+                            <Canvas style={{
+                                width: "326px",
+                                height: "326px"
+                            }}>
+                                <directionalLight intensity={1}
+                                    color={"#ccc"}
+                                />
+                                <OrbitControls />
+                                <Suspense fallback={<CanvasLoader />}>
+                                    <Globe />
+                                </Suspense>
+                            </Canvas>
 
                         </div>
                         <div>
