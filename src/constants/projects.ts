@@ -4,8 +4,8 @@ export const projects = [
         desc: "The Online Class Attendance System uses face detection and WebRTC to track student presence and participation in real time. Instructors can monitor attendance live, with automatic updates if a student becomes inactive or leaves the frame.",
         subdesc:
             'Built with React, Node.js, Socket.io, MongoDB, and Tailwind CSS, the system ensures real-time updates and stores attendance data, generating detailed reports after each class.',
-        href: ' ',
-        texture: '/textures/project/project1.mp4',
+        href: 'https://wemeets.vercel.app/',
+        texture: '/textures/project/wemeet.mp4',
         logo: '/assets/wemeet.png',
         logoStyle: {
             backgroundColor: '#2A1816',
@@ -42,7 +42,7 @@ export const projects = [
         subdesc:
             'With JWT for secure authentication and Google API integration, CloudKeep allows users to easily connect and manage files stored on Google Drive. The platform supports real-time file synchronization and offers a secure, cost-free solution for file management and sharing.',
         href: 'https://cloudkeep.vercel.app',
-        texture: '/textures/project/project2.mp4',
+        texture: '/textures/project/cloudkeep.mp4',
         logo: '/assets/project-logo2.png',
         logoStyle: {
             backgroundColor: '#13202F',
@@ -74,12 +74,12 @@ export const projects = [
         ],
     },
     {
-        title: 'QuickMeet - Effortless video calls, no sign-up',
-        desc: 'QuickMeet is a hassle-free online meeting platform built with the MERN stack, enabling users to join video calls instantly without any login or sign-up. Using WebRTC for real-time video communication and Socket.io for seamless interactions, QuickMeet ensures smooth, high-quality meetings with minimal setup.',
+        title: 'QuickMeets - Effortless video calls, no sign-up',
+        desc: 'QuickMeets is a hassle-free online meeting platform built with the MERN stack, enabling users to join video calls instantly without any login or sign-up. Using WebRTC for real-time video communication and Socket.io for seamless interactions, QuickMeets ensures smooth, high-quality meetings with minimal setup.',
         subdesc:
             'Powered by Express.js, offers fast, secure meetings accessible with just a click. It’s perfect for quick check-ins and spontaneous discussions, focusing on simplicity and ease of use.',
-        href: ' ',
-        texture: '/textures/project/project3.mp4',
+        href: 'https://quickmeets.vercel.app',
+        texture: '/textures/project/quickmeet.mp4',
         logo: '/assets/quickmeet.png',
         logoStyle: {
             backgroundColor: '#1c1c1c',
@@ -117,8 +117,8 @@ export const projects = [
         desc: 'ApiPilot is a user-friendly REST API client that simplifies making and managing API requests. Supporting GET, POST, PUT, DELETE, and PATCH methods, it offers an intuitive interface for easy API testing and interaction.',
         subdesc:
             'Designed for both developers and beginners, ApiPilot streamlines API execution with a clean interface, making it faster and more efficient to manage requests and view responses.',
-        href: ' ',
-        texture: '/textures/project/project4.mp4',
+        href: 'https://apipilot.vercel.app',
+        texture: '/textures/project/apipilot.mp4',
         logo: '/assets/apipilot.png',
         logoStyle: {
             backgroundColor: '#0E1F38',
@@ -149,8 +149,8 @@ export const projects = [
         desc: 'SwiftSend is a peer-to-peer (P2P) file-sharing platform designed for fast, secure, and effortless transfer of large files. Built with React, Node.js, Socket.io, and WebRTC, SwiftSend enables direct, server-free file sharing between users, ensuring faster transfers and enhanced privacy.',
         subdesc:
             'With its intuitive interface, SwiftSend makes sending large files quick and easy. Users can securely upload, share, and download files directly, providing a fast and seamless P2P file-sharing experience.',
-        href: ' ',
-        texture: '/textures/project/project5.mp4',
+        href: 'https://swiftsend.vercel.app',
+        texture: '/textures/project/swiftsend.mp4',
         logo: '/assets/swiftsend.png',
         logoStyle: {
             backgroundColor: '#1C1A43',

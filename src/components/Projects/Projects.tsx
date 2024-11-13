@@ -80,7 +80,7 @@ export default function Projects() {
                                 currentProject.tags.map(tag => (
                                     <img src={tag.path}
                                         key={tag.id}
-                                        className="p-3 rounded-lg w-12 bg-black-300"
+                                        className="p-3 rounded-lg w-12 h-12 bg-black-300"
                                         alt="" />
                                 ))
                             }
