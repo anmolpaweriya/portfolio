@@ -1,4 +1,4 @@
-import { Suspense, useRef, useState } from "react";
+import { Suspense, useState } from "react";
 import CustomButton from "../CustomButton/CustomButton";
 import { Globe } from "../3Dmodels/Globe";
 import { Canvas } from "@react-three/fiber";
