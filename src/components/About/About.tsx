@@ -8,7 +8,7 @@ export default function About() {
 
     const [hasCopied, setHasCopied] = useState(false);
     const handleCopy = () => {
-        navigator.clipboard.writeText(' adrian@jsmastery.pro');
+        navigator.clipboard.writeText(' paweriyaanmol@gmail.com');
         setHasCopied(true);
 
         setTimeout(() => {
