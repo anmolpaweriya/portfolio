@@ -12,24 +12,38 @@ export default function Footer() {
 
                 <div className="flex gap-3">
 
-                    <div className="social-icon">
-                        <img src="/assets/github.svg" alt="https://github.com/anmolpaweriya"
+                    <a
+                        target="_blank"
+                        href="https://github.com/anmolpaweriya" className="social-icon">
+                        <img src="/assets/github.svg" alt=""
                             className="w-1/2 h-1/2"
                         />
 
-                    </div>
-                    <div className="social-icon">
-                        <img src="/assets/leetcode.png" alt="https://leetcode.com/u/Anmolpaweriya/"
+                    </a>
+                    <a
+                        target="_blank"
+                        href="https://leetcode.com/u/Anmolpaweriya" className="social-icon">
+                        <img src="/assets/leetcode.png" alt=""
                             className="w-1/2 h-1/2"
                         />
 
-                    </div>
-                    <div className="social-icon">
-                        <img src="/assets/linkedin.png" alt="https://www.linkedin.com/in/anmol-paweriya/"
+                    </a>
+                    <a
+                        target="_blank"
+                        href="https://www.linkedin.com/in/anmol-paweriya" className="social-icon">
+                        <img src="/assets/linkedin.png" alt=""
                             className="w-1/2 h-1/2"
                         />
 
-                    </div>
+                    </a>
+                    <a
+                        target="_blank"
+                        href="https://tryhackme.com/r/p/anisole" className="social-icon">
+                        <img src="/assets/tryhackme.svg" alt=""
+                            className="w-1/2 h-1/2"
+                        />
+
+                    </a>
                 </div>
 
                 <p className="text-white-500">© 2024 Anmol Paweriya. All rights reserved.</p>
