@@ -13,19 +13,19 @@ export default function Footer() {
                 <div className="flex gap-3">
 
                     <div className="social-icon">
-                        <img src="/assets/github.svg" alt=""
+                        <img src="/assets/github.svg" alt="https://github.com/anmolpaweriya"
                             className="w-1/2 h-1/2"
                         />
 
                     </div>
                     <div className="social-icon">
-                        <img src="/assets/leetcode.png" alt=""
+                        <img src="/assets/leetcode.png" alt="https://leetcode.com/u/Anmolpaweriya/"
                             className="w-1/2 h-1/2"
                         />
 
                     </div>
                     <div className="social-icon">
-                        <img src="/assets/linkedin.png" alt=""
+                        <img src="/assets/linkedin.png" alt="https://www.linkedin.com/in/anmol-paweriya/"
                             className="w-1/2 h-1/2"
                         />
 
