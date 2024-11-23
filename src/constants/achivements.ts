@@ -17,11 +17,11 @@ export const achivements = [
     },
     {
         id: 3,
-        name: '400+ LeetCode problems',
+        name: '440+ LeetCode problems',
         position: '  ',
         img: 'assets/medal.png',
         desc:
-            'In addition to my achievements in science exhibitions, I have solved over 404 LeetCode problems, sharpening my problem-solving and coding skills. This rigorous practice has improved my algorithmic thinking and helped me develop a deeper understanding of data structures and algorithms.',
+            'In addition to my achievements in science exhibitions, I have solved over 440 LeetCode problems, sharpening my problem-solving and coding skills. This rigorous practice has improved my algorithmic thinking and helped me develop a deeper understanding of data structures and algorithms.',
     },
     {
         id: 4,
