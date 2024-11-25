@@ -70,8 +70,10 @@ export default function About() {
                                 width: "326px",
                                 height: "326px"
                             }}>
-                                <directionalLight intensity={1}
+                                <directionalLight
+                                    intensity={3}
                                     color={"#ccc"}
+                                    position={[1, 1, 1]}
                                 />
                                 <OrbitControls />
                                 <Suspense fallback={<CanvasLoader />}>
