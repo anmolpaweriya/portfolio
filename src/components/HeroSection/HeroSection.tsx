@@ -5,16 +5,11 @@ import { useMediaQuery } from "react-responsive";
 import { calculateSizes } from "../../constants/calculateSize";
 import HeroCanvaLoading from "../Loading/CanvaLoader";
 
-// icons
-import { PiHandWavingFill } from "react-icons/pi";
-
 // 3D models
 import Cube from "../3Dmodels/Cube";
 import Rings from "../3Dmodels/Rings";
 import Target from "../3Dmodels/Target";
 import ReactLogo from "../3Dmodels/ReactLogo";
-import HackerRoom from "../3Dmodels/HackerRoom";
-import HeroCamera from "../3Dmodels/HeroCamera";
 import { BiMapPin } from "react-icons/bi";
 import { CgMail } from "react-icons/cg";
 import { FaDownload, FaGithub, FaLinkedin } from "react-icons/fa";
