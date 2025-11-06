@@ -1,5 +1,14 @@
 export const qualifications = [
   {
+    name: "MCA (Master of Computer Applications)",
+    animation: "clapping",
+    icon: "/assets/graduation.png",
+    title:
+      "Currently pursuing MCA from Lovely Professional University, Phagwara, Punjab, started in 2025, focusing on advanced concepts in computer applications and software development.",
+    start: "2025",
+    end: "Present",
+  },
+  {
     name: "B.Sc. Computer Science",
     animation: "salute",
     icon: "/assets/graduation.png",

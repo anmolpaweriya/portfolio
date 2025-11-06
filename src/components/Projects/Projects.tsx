@@ -1,4 +1,4 @@
-import { Suspense, useState } from "react";
+import { Suspense, useRef, useState } from "react";
 import { projects } from "../../constants/projects";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
@@ -11,6 +11,7 @@ import CanvasLoader from "../Loading/CanvaLoader";
 export default function Projects() {
   const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
   const currentProject = projects[currentProjectIndex];
+  const sectionRef = useRef<HTMLElement>(null);
 
   // functions
 
@@ -29,19 +30,56 @@ export default function Projects() {
   }
 
   // animation
+  //
   useGSAP(() => {
+    const ctx = gsap.context(() => {
+      gsap.from(".projects-title", {
+        y: -30,
+        opacity: 0,
+        duration: 0.6,
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top 80%",
+          toggleActions: "play none none reverse",
+        },
+      });
+
+      gsap.from(".project-details", {
+        x: -60,
+        opacity: 0,
+        duration: 0.8,
+        scrollTrigger: {
+          trigger: ".project-content",
+          start: "top 75%",
+          toggleActions: "play none none reverse",
+        },
+      });
+
+      gsap.from(".project-preview", {
+        x: 60,
+        opacity: 0,
+        duration: 0.8,
+        scrollTrigger: {
+          trigger: ".project-content",
+          start: "top 75%",
+          toggleActions: "play none none reverse",
+        },
+      });
+    }, sectionRef);
+
     gsap.from(".animatedText", {
       opacity: 0,
       stagger: 0.1,
       translateY: 20,
     });
+    return () => ctx.revert();
   }, [currentProjectIndex]);
 
   return (
-    <section id="projects" className="mt-20 c-space">
-      <h1 className="head-text">My Selected Work</h1>
+    <section ref={sectionRef} id="projects" className="mt-20 c-space">
+      <h1 className="head-text projects-title">My Selected Work</h1>
 
-      <div className="grid lg:grid-cols-2 grid-cols-1 mt-12 gap-5 w-full">
+      <div className="grid lg:grid-cols-2 grid-cols-1 mt-12 gap-5 w-full project-content">
         <div className="flex flex-col gap-5 relative sm:p-10 py-10 px-5 shadow-2xl shadow-black-200">
           <div className=" absolute top-0 right-0">
             <img
@@ -67,8 +105,12 @@ export default function Projects() {
               {currentProject.title}
             </p>
 
-            <p className="animatedText">{currentProject.desc}</p>
-            <p className="animatedText">{currentProject.subdesc}</p>
+            <p className="animatedText project-details">
+              {currentProject.desc}
+            </p>
+            <p className="animatedText project-details">
+              {currentProject.subdesc}
+            </p>
           </div>
 
           <div className="grid gap-5 md:flex items-center w-full">
@@ -103,7 +145,7 @@ export default function Projects() {
           </div>
         </div>
 
-        <div className="w-full border rounded-lg">
+        <div className="w-full border rounded-lg project-preview">
           <Canvas>
             <ambientLight intensity={10} />
             <Suspense fallback={<CanvasLoader />}>

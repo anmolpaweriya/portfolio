@@ -1,17 +1,58 @@
 import { Canvas } from "@react-three/fiber";
 import Avatar from "../3Dmodels/Avatar";
 import { OrbitControls } from "@react-three/drei";
-import { Suspense, useState } from "react";
+import { Suspense, useRef, useState } from "react";
 import CanvasLoader from "../Loading/CanvaLoader";
 import { qualifications } from "../../constants/qualifications";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 export default function Qualifications() {
   const [animationName, setAnimationName] = useState("idle");
+  const sectionRef = useRef<HTMLElement>(null);
 
+  useGSAP(() => {
+    const ctx = gsap.context(() => {
+      gsap.from(".qual-title", {
+        y: -30,
+        opacity: 0,
+        duration: 0.6,
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top 80%",
+          toggleActions: "play none none reverse",
+        },
+      });
+
+      gsap.from(".work-canvas", {
+        x: -30,
+        opacity: 0,
+        duration: 0.8,
+        scrollTrigger: {
+          trigger: ".work-container",
+          start: "top 75%",
+          toggleActions: "play none none reverse",
+        },
+      });
+
+      gsap.from(".work-content_container", {
+        x: 60,
+        opacity: 0,
+        duration: 0.6,
+        scrollTrigger: {
+          trigger: ".work-container",
+          start: "top 80%",
+          toggleActions: "play none none reverse",
+        },
+      });
+    }, sectionRef);
+
+    return () => ctx.revert();
+  }, []);
   return (
-    <section className="w-full c-space">
+    <section ref={sectionRef} className="w-full c-space">
       <div className="w-full text-white-600">
-        <h1 className="head-text">Qualifications</h1>
+        <h1 className="qual-title head-text">Qualifications</h1>
 
         <div className="work-container">
           <div className="work-canvas">
