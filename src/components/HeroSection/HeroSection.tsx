@@ -109,19 +109,25 @@ export default function HeroSection() {
         {/* Right side - Image */}
 
         <div className="relative lg:justify-self-end animate-slideInRight order-1 lg:order-2 w-full h-[80vh]  flex justify-center items-center ">
-          <div className="relative max-w-sm mx-auto animate-float">
+          <div className="relative max-w-md mx-auto animate-float">
             {/* Glow effect behind image */}
             <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20 blur-3xl opacity-50 animate-pulse"></div>
 
             {/* Image container */}
-            <div className="relative dark-card rounded-3xl p-1 overflow-hidden ">
+            <div className="relative dark-card rounded-3xl  overflow-hidden ">
+              <div className=" w-80 aspect-square rounded-full absolute top-[35%] left-[50%] z-[-10] translate-x-[-50%] translate-y-[-50%] bg-gradient-to-br from-gray-300 via-gray-400 to-gray-600" />
               <img
                 // src={heroPortrait}
-                src="/assets/anmol.jpg"
+                src="/assets/anmol.png"
                 alt="Anmol - Full Stack Developer"
                 className="w-full h-auto rounded-3xl object-cover"
                 style={{ maxHeight: "600px" }}
               />
+            </div>
+            <div className="inline-block bg-[#222] border border-gray-500 shadow-[#333] px-5 py-2 rounded-md shadow-md w-full">
+              <h2 className="text-xl  font-semibold tracking-wide text-gray-100 text-center">
+                Anmol
+              </h2>
             </div>
           </div>
           <div className="w-full h-full absolute inset-0 animate-float ">
